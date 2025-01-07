@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIST AI-Eco Lab</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #DC2715;
+            --secondary-color: #004191;
+        }
+
+        .prism-bg {
+            background: linear-gradient(135deg, #0F0F70, #004191, #DC2715);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        .hero-section {
+            position: relative;
+            color: white;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .research-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .publication-item {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-member-img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../img/gist_logo.png" alt="PRISM Lab Logo" height="40" class="me-2">
+                <span class="fs-4">AI-Eco Lab</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--<div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Recent Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">팀</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">연락처</a>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="prism-bg"></div>
+        <div class="container hero-content">
+            <h1 class="display-3 fw-bold">AI-Eco Lab shines AI Values</br> on the world by PRISM</h1>
+            <p class="lead">
+                <span class="fs-4 fw-bold">P</span>olicy - Designing balanced frameworks for AI governance</br>
+                <span class="fs-4 fw-bold">R</span>egulation - Advancing innovative regulatory approaches</br>
+                <span class="fs-4 fw-bold">I</span>nnovation - Fostering sustainable technological progress</br>
+                <span class="fs-4 fw-bold">S</span>ystems - Establishing systematic evaluation frameworks</br>
+                <span class="fs-4 fw-bold">M</span>etrics - Developing scientific measures to create new value in the AI era
+            </p>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="row g-4 row-cols-1 row-cols-md-3">
+                <div class="col">
+                    <div class="card research-card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">AI with Humanity</h5>
+                            <p class="card-text flex-grow-1">Building foundations in philosophy, literature, and law to enable AI agents to understand and respect human values.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card research-card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">AI for Urban Planning</h5>
+                            <p class="card-text flex-grow-1">Developing multidimensional urban design solutions powered by generative AI to effectively address urban complexity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card research-card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">AI for the Global Value Chain</h5>
+                            <p class="card-text flex-grow-1">Providing strategic decision-making support to strengthen global value chain security through prediction and analysis of strategic industry evolution patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Recent Publications</h2>
+            <div class="publication-item mb-4">
+                <h5>
+                    <a href="https://ieeexplore.ieee.org/document/8966277" 
+                       class="text-decoration-none hover:text-blue-600 transition-colors"
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Platfrom Provider Roles in Innovation in Software Service Ecosystems
+                    </a>
+                </h5>
+                <p class="text-gray-600">K Kim, J Altmann, IEEE Transactions on Engineering Management, 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professor Section -->
+    <section id="professor" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professor</h2>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="d-lg-flex d-block align-items-start">
+                        <!-- Left side - Photo -->
+                        <div class="flex-shrink-0 text-center text-lg-start mb-4 mb-lg-0" style="width: 100%; max-width: 400px; margin: 0 auto;">
+                            <img src="../img/profkim_hero" alt="Professor Kibae Kim" 
+                                class="img-fluid rounded"
+                                style="width: 100%; height: 500px; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Right side - Information -->
+                        <div class="flex-grow-1 ms-lg-5">
+                            <div class="mb-4">
+                                <h2>Kibae KIM</h2>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="mb-2"><span style="color:#004191;">Education</span></h5>
+                                <p class="mb-2"><span class="fw-bold">2005</span> Ph.D. in Technology Management Economics and Policy, Seoul National University</p>
+                                <p class="mb-2"><span class="fw-bold">1998</span> B.Sc. in Physics, KAIST</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="mb-2"><span style="color:#004191;">Professional Experience</span></h5>
+                                <p class="mb-2"><span class="fw-bold">2024-Present</span> Assistant Professor, GIST Graduate School of AI Policy & Strategy</p>
+                                <p class="mb-2"><span class="fw-bold">2023-2024</span> Managing Director, Tmax A&C</p>
+                                <p class="mb-2"><span class="fw-bold">2022-2023</span> Research Associate Professor, KAIST Global Strategy Institute</p>
+                                <p class="mb-2"><span class="fw-bold">2019-2022</span> Fellow, World Economic Forum (WEF) Center for the Fourth Industrial Revolution</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5 class="mb-2"><span style="color:#004191;">Research Interests</span></h5>
+                                <p>AI Policy, Digital Innovation, Platform Strategy</p>
+                            </div>
+                            
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="https://scholar.google.com/citations?user=g20QIz4AAAAJ&hl=ko&oi=sra" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="btn btn-outline-primary">
+                                    Google Scholar
+                                </a>
+                                <a href="https://kr.linkedin.com/in/kibae-kim-094227120" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="btn btn-outline-primary">
+                                    LinkedIn
+                                </a>
+                                <a href="mailto:kibaekim@gist.ac.kr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-outline-primary">
+                                    Mail
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Members</h2>
+            <div class="row g-4">
+                <!-- First Member -->
+                <div class="col-12 mb-4">
+                    <div class="d-lg-flex d-block align-items-start">
+                        <div class="flex-shrink-0 text-center text-lg-start mb-4 mb-lg-0" style="width: 100%; max-width: 200px; margin: 0 auto;">
+                            <img src="../img/" alt="Wookjin Kim" 
+                                class="img-fluid rounded"
+                                style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="flex-grow-1 ms-lg-4 text-center text-lg-start">
+                            <h5>Wookjin KIM</h5>
+                            <h6><a href="mailto:dr.oogie@gm.gist.ac.kr">dr.oogie@gm.gist.ac.kr</a></h6>
+                            <p class="mb-0"><span style="font-weight: bold; color:rgb(103, 103, 103);">MS-PhD Integrated Program</span></p>
+                            <p class="mb-0">M.B.A, Entrepreneurship, University of Tehran, 2018</p>
+                            <p class="mb-0">B.A, Sociology, Korea University, 2009</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Member -->
+                <div class="col-12 mb-4">
+                    <div class="d-lg-flex d-block align-items-start">
+                        <div class="flex-shrink-0 text-center text-lg-start mb-4 mb-lg-0" style="width: 100%; max-width: 200px; margin: 0 auto;">
+                            <img src="../img/cklim.png" alt="Chaikyung Lim" 
+                                class="img-fluid rounded"
+                                style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="flex-grow-1 ms-lg-4 text-center text-lg-start">
+                            <h5>Chaikyung LIM</h5>
+                            <h6><a href="mailto:cklim.aix@gm.gist.ac.kr">cklim.aix@gm.gist.ac.kr</a></h6>
+                            <p class="mb-0"><span style="font-weight: bold; color:rgb(103, 103, 103);">Master's Student</span></p>
+                            <p class="mb-0">B.S, Computer Science, Korea National Open University, 2023</p>
+                            <p class="mb-0">BA Econ, International Economics & Law, Hankuk University of Foreign Studies, 2016</p>
+                            <p class="mb-0">B.A, French Education, Hankuk University of Foreign Studies, 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Address</h5>
+                    <p>GIST College Building B(N5), Room 220</br>
+                    123, Cheomdangwagi-ro, Buk-gu, Gwangju, Republic of Korea</p>
+                    <h5>E-Mail</h5>
+                    <p>gistaixaiecolab@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

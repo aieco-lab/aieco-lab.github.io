@@ -88,28 +88,42 @@
             border: 3px solid var(--primary-color);
         }
         
-        .news-card .card-title {
-            margin-bottom: 0;
+        .news-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-container {
+            margin-bottom: 1rem;
+            min-height: auto;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #333;
+            overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .news-card .date-container {
-            height: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .news-card .content-container {
-            height: 100%;
+            line-height: 1.5;
         }
 
         @media (max-width: 767.98px) {
-            .news-card .title-container {
-                height: auto !important;
-                margin-bottom: 0.5rem;
+            .card-title {
+                -webkit-line-clamp: 4; /* 모바일에서는 더 많은 줄 허용 */
+            }
+            
+            .title-container {
+                margin-bottom: 0.75rem;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
             }
         }
     </style>
@@ -150,7 +164,7 @@
                     <a href="news.html" class="text-decoration-none w-100">
                         <div class="card news-card w-100 h-100">
                             <div class="card-body d-flex flex-column">
-                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                <div class="title-container">
                                     <h5 class="card-title">FAO Korea Liaison Office Director Dr.Shengyao Tang Delivered Special Lecture at GIST</h5>
                                 </div>
                                 <div class="date-container mb-2">
@@ -167,7 +181,7 @@
                     <a href="news.html" class="text-decoration-none w-100">
                         <div class="card news-card w-100 h-100">
                             <div class="card-body d-flex flex-column">
-                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                <div class="title-container">
                                     <h5 class="card-title">GIST AI Policy & Strategy Graduate School Hosted Expert Panel on "AI, Robot, and the Meaning of Labour"</h5>
                                 </div>
                                 <div class="date-container mb-2">
@@ -184,7 +198,7 @@
                     <a href="news.html" class="text-decoration-none w-100">
                         <div class="card news-card w-100 h-100">
                             <div class="card-body d-flex flex-column">
-                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                <div class="title-container">
                                     <h5 class="card-title">AI-Eco Lab Website Officially Launched</h5>
                                 </div>
                                 <div class="date-container mb-2">
@@ -198,8 +212,6 @@
                     </a>
                 </div>
             </div>
-            
-            <!-- More News 링크 추가 -->
             <div class="row mt-4">
                 <div class="col-12 d-flex justify-content-end justify-content-md-end">
                     <a href="news.html" class="btn btn-outline-primary">More News</a>

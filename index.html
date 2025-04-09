@@ -39,6 +39,16 @@
             backdrop-filter: blur(10px);
         }
 
+        .news-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
         .research-card {
             transition: transform 0.3s ease;
             border: none;
@@ -77,6 +87,31 @@
             object-fit: cover;
             border: 3px solid var(--primary-color);
         }
+        
+        .news-card .card-title {
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .news-card .date-container {
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-card .content-container {
+            height: 100%;
+        }
+
+        @media (max-width: 767.98px) {
+            .news-card .title-container {
+                height: auto !important;
+                margin-bottom: 0.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -103,6 +138,73 @@
                 <span class="fs-4 fw-bold">S</span>ystems - Establishing systematic evaluation frameworks</br>
                 <span class="fs-4 fw-bold">M</span>etrics - Developing scientific measures to create new value in the AI era
             </p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title">AI-Eco Lab News</h2>
+            <div class="row g-4 row-cols-1 row-cols-md-3">
+                <div class="col d-flex">
+                    <a href="news.html" class="text-decoration-none w-100">
+                        <div class="card news-card w-100 h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                    <h5 class="card-title">FAO Korea Liaison Office Director Dr.Shengyao Tang Delivered Special Lecture at GIST</h5>
+                                </div>
+                                <div class="date-container mb-2">
+                                    <p class="card-text text-muted mb-0">2025-04-02</p>
+                                </div>
+                                <div class="content-container flex-grow-1">
+                                    <p class="card-text">Dr. Shengyao Tang of FAO Korea delivered a special lecture at GIST on resilient agrifood systems and discussed potential research collaborations with GIST President Kichul Lim to strengthen regional partnerships in the Gwangju, Jeollanam-do area.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col d-flex">
+                    <a href="news.html" class="text-decoration-none w-100">
+                        <div class="card news-card w-100 h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                    <h5 class="card-title">GIST AI Policy & Strategy Graduate School Hosted Expert Panel on "AI, Robot, and the Meaning of Labour"</h5>
+                                </div>
+                                <div class="date-container mb-2">
+                                    <p class="card-text text-muted mb-0">2025-03-17</p>
+                                </div>
+                                <div class="content-container flex-grow-1">
+                                    <p class="card-text">GIST AI Policy & Strategy Graduate School hosted a panel on "AI, Robot, and the Meaning of Labour" featuring Professor Nicky Dries from Belgium's Leuven University, Professor Kibae Kim from GIST, and professors from Chonnam National University who presented research and engaged in discussions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col d-flex">
+                    <a href="news.html" class="text-decoration-none w-100">
+                        <div class="card news-card w-100 h-100">
+                            <div class="card-body d-flex flex-column">
+                                <div class="title-container" style="height: 8rem; overflow: hidden;">
+                                    <h5 class="card-title">AI-Eco Lab Website Officially Launched</h5>
+                                </div>
+                                <div class="date-container mb-2">
+                                    <p class="card-text text-muted mb-0">2025-01-07</p>
+                                </div>
+                                <div class="content-container flex-grow-1">
+                                    <p class="card-text">The AI-Eco Lab launched its official website, offering a comprehensive platform that showcases research activities, team members, and projects while serving as a central hub for information access and communication with collaborators and the academic community.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- More News 링크 추가 -->
+            <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-end justify-content-md-end">
+                    <a href="news.html" class="btn btn-outline-primary">More News</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -220,7 +322,7 @@
                                 class="btn btn-outline-primary">
                                     WEF
                                 </a>
-                                <a href="https://www.gbbc.io/about/dr-kibae-kim" 
+                                <a href="https://gbbcouncil.org/news/introducing-the-2024-gbbc-ambassador-cohort/" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 class="btn btn-outline-primary">
